@@ -5,4 +5,9 @@ package com.example.dipto.sqlitedatabasepracticenew;
  */
 
 public class ColumnName {
+
+    public static final String TABLE_NAME = "mytable" ;
+    public static final String UID =  "_id" ;
+    public static final String NAME = "Name" ;
+    public static final String PASSWORD = "Password" ;
 }
