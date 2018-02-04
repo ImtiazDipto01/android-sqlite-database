@@ -33,7 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(create_customer_table);
-        Log.d("++++TABLE Create++++", "customer table created");
+        Log.d("++++TABLE Create++++", "customer table created !");
     }
 
 
