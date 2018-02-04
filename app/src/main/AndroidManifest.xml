@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".InsertDataActivity"
+            android:label="Insert Data"></activity>
     </application>
 
 </manifest>

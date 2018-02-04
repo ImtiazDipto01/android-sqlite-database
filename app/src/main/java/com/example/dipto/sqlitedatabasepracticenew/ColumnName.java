@@ -6,8 +6,11 @@ package com.example.dipto.sqlitedatabasepracticenew;
 
 public class ColumnName {
 
-    public static final String TABLE_NAME = "mytable" ;
-    public static final String UID =  "_id" ;
-    public static final String NAME = "Name" ;
-    public static final String PASSWORD = "Password" ;
+    public static final String TABLE_NAME = "Customers" ;
+    public static final String CustomerId =  "CustomerID" ;
+    public static final String CustomerName = "CustomerName" ;
+    public static final String ContactName = "ContactName" ;
+    public static final String City = "City" ;
+    public static final String PostalCode = "PostalCode" ;
+    public static final String Country = "Country" ;
 }
