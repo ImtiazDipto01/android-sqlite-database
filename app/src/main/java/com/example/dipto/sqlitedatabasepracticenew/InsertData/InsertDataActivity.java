@@ -1,7 +1,9 @@
-package com.example.dipto.sqlitedatabasepracticenew;
+package com.example.dipto.sqlitedatabasepracticenew.InsertData;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.dipto.sqlitedatabasepracticenew.R;
 
 public class InsertDataActivity extends AppCompatActivity {
 
