@@ -13,49 +13,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Customer Name"/>
+        android:hint="Customer Name"/>
 
     <EditText
         android:id="@+id/contact_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Contact Name"/>
+        android:hint="Contact Name"/>
 
     <EditText
         android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Address"/>
+        android:hint="Address"/>
 
     <EditText
         android:id="@+id/city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="City"/>
+        android:hint="City"/>
 
     <EditText
         android:id="@+id/postal_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Postal Code"/>
+        android:hint="Postal Code"/>
 
     <EditText
         android:id="@+id/country"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Country"/>
+        android:hint="Country"/>
 
     <Button
+        android:id="@+id/btn_insert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
-        android:text="Submit"/>
+        android:text="Insert Data"/>
 
 </LinearLayout>
