@@ -2,6 +2,7 @@ package com.example.dipto.sqlitedatabasepracticenew.Utils;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -84,6 +85,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return msg ;
     }
 
+    public Cursor getCustomerList(SQLiteDatabase db){
+
+        Cursor cursor ;
+        String[] needed_column = {ColumnName.CustomerInfo.CUSTOMER_NAME, ColumnName.CustomerInfo.ADDRESS,
+                ColumnName.CustomerInfo.CITY, ColumnName.CustomerInfo.COUNTRY} ;
+        cursor = db.query(ColumnName.CustomerInfo.TABLE_NAME, needed_column, null, null, null, null, null) ;
+        return cursor ;
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
