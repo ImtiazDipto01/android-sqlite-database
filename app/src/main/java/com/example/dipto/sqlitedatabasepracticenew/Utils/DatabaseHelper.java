@@ -52,8 +52,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void addCustomerInfo(String customer_name, String contact_name, String address,
+    public String addCustomerInfo(String customer_name, String contact_name, String address,
                                 String city, String postal_code, String country, SQLiteDatabase db){
+
+        String msg = "" ;
 
         try {
 
@@ -69,14 +71,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             db.insert(ColumnName.CustomerInfo.TABLE_NAME, String.valueOf(nullColumnHack), contentValues);
             Log.d("+++++CUSTOMER INFO++++", "a new row added");
-            Toast.makeText(context, "a new row added", Toast.LENGTH_SHORT).show();
+            msg = "1" ;
+            //Toast.makeText(context, "a new row added", Toast.LENGTH_SHORT).show();
 
         }
 
         catch (SQLiteException e){
             Log.d("++++SQLiteException++++", String.valueOf(e));
-            Toast.makeText(context, "failed to add a new row", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context, "failed to add a new row", Toast.LENGTH_SHORT).show();
+            msg = "0" ;
         }
+        return msg ;
     }
 
 
