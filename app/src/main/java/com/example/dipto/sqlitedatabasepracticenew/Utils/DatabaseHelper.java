@@ -23,11 +23,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static String create_customer_table =
             "CREATE TABLE "+ColumnName.CustomerInfo.TABLE_NAME+"("
                     +ColumnName.CustomerInfo.CUSTOMER_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    +ColumnName.CustomerInfo.CUSTOMER_NAME+" TEXT"
-                    +ColumnName.CustomerInfo.CONTACT_NAME+" TEXT"
-                    +ColumnName.CustomerInfo.ADDRESS+" TEXT"
-                    +ColumnName.CustomerInfo.CITY+" TEXT"
-                    +ColumnName.CustomerInfo.POSTAL_CODE+" TEXT"
+                    +ColumnName.CustomerInfo.CUSTOMER_NAME+" TEXT, "
+                    +ColumnName.CustomerInfo.CONTACT_NAME+" TEXT, "
+                    +ColumnName.CustomerInfo.ADDRESS+" TEXT, "
+                    +ColumnName.CustomerInfo.CITY+" TEXT, "
+                    +ColumnName.CustomerInfo.POSTAL_CODE+" TEXT, "
                     +ColumnName.CustomerInfo.COUNTRY+" TEXT);";
 
 
@@ -68,9 +68,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             contentValues.put(ColumnName.CustomerInfo.POSTAL_CODE, postal_code);
             contentValues.put(ColumnName.CustomerInfo.COUNTRY, country);
 
-            String[] nullColumnHack = {ColumnName.CustomerInfo.ADDRESS, ColumnName.CustomerInfo.CITY, ColumnName.CustomerInfo.POSTAL_CODE};
+            //String[] nullColumnHack = {ColumnName.CustomerInfo.ADDRESS, ColumnName.CustomerInfo.CITY, ColumnName.CustomerInfo.POSTAL_CODE};
 
-            db.insert(ColumnName.CustomerInfo.TABLE_NAME, String.valueOf(nullColumnHack), contentValues);
+            db.insert(ColumnName.CustomerInfo.TABLE_NAME, null, contentValues);
             Log.d("+++++CUSTOMER INFO++++", "a new row added");
             msg = "1" ;
             //Toast.makeText(context, "a new row added", Toast.LENGTH_SHORT).show();

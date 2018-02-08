@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.dipto.sqlitedatabasepracticenew.R;
@@ -36,7 +37,9 @@ public class CustomerListActivity extends AppCompatActivity implements CustomerL
     @Override
     public void getCustomerList(List<CustomerListModel> list) {
         if(!list.isEmpty()){
+            Log.d("++++LIST++++", "not empty") ;
             customerListAdapter = new CustomerListAdapter(getAppContext(), list) ;
+            customerList.setAdapter(customerListAdapter);
         }
     }
 

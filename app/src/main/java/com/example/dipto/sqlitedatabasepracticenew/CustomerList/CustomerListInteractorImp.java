@@ -3,6 +3,7 @@ package com.example.dipto.sqlitedatabasepracticenew.CustomerList;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.dipto.sqlitedatabasepracticenew.Utils.DatabaseHelper;
 
@@ -32,10 +33,10 @@ public class CustomerListInteractorImp implements CustomerListInteractor {
         if(cursor != null){
             while(cursor.moveToNext()){
                 String name = cursor.getString(0) ;
-                String address = cursor.getString(2) ;
-                String city = cursor.getString(3);
-                String country = cursor.getString(5);
-                customerListModel = new CustomerListModel(name,address,city, country);
+                String address = cursor.getString(1) ;
+                String city = cursor.getString(2);
+                String country = cursor.getString(3);
+                customerListModel = new CustomerListModel(name, address, city, country);
                 list.add(customerListModel);
             }
             onRequestListener.onSuccess(list);
