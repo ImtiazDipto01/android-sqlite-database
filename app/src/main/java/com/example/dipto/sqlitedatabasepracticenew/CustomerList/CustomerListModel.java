@@ -6,10 +6,19 @@ package com.example.dipto.sqlitedatabasepracticenew.CustomerList;
 
 class CustomerListModel {
 
-    String customer_name = null;
-    String customer_address = null;
-    String customer_city = null ;
-    String customer_country = null ;
+    private String customer_name = null;
+    private String customer_address = null;
+    private String customer_city = null ;
+    private String customer_country = null ;
+
+    public CustomerListModel(String customer_name, String customer_address, String customer_city,
+                             String customer_country){
+
+        this.customer_name = customer_name;
+        this.customer_address = customer_address ;
+        this.customer_city = customer_city ;
+        this.customer_country = customer_country ;
+    }
 
     public String getCustomer_name() {
         return customer_name;

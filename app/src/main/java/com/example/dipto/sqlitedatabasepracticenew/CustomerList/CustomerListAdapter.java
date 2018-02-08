@@ -41,7 +41,14 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
     @Override
     public void onBindViewHolder(CustomerListViewHolder holder, int position) {
         CustomerListModel customerListModel = list.get(position) ;
-
+        holder.customerNameText.setText(customerListModel.getCustomer_name());
+        holder.customerCountryText.setText(customerListModel.getCustomer_country());
+        if(customerListModel.getCustomer_address() != null){
+            holder.customerAddressText.setText(customerListModel.getCustomer_address());
+        }
+        if(customerListModel.getCustomer_city() != null){
+            holder.customerCityText.setText(customerListModel.getCustomer_city());
+        }
     }
 
     @Override
