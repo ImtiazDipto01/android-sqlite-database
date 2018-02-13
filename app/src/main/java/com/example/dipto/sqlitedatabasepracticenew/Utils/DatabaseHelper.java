@@ -94,6 +94,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor ;
     }
 
+    public Cursor getCustomerBySearch(String search_name, SQLiteDatabase db){
+
+        Cursor cursor = null ;
+
+        String search_query = "SELECT "+ColumnName.CustomerInfo.CUSTOMER_NAME+", "
+                +ColumnName.CustomerInfo.COUNTRY+" FROM "+ColumnName.CustomerInfo.TABLE_NAME+
+                " WHERE "+ColumnName.CustomerInfo.CUSTOMER_NAME+ " = "+search_name ;
+        try {
+            cursor = db.rawQuery(search_query, null) ;
+        }
+        catch (SQLException e){
+            Log.d("++++SEARCH_QUERY++++", String.valueOf(e));
+            Toast.makeText(context, "Search Query Have Exception", Toast.LENGTH_SHORT).show();
+        }
+
+        return cursor ;
+    }
+
+    public Cursor getTestSearch(String search_name, SQLiteDatabase db){
+
+        Cursor cursor = null ;
+
+        /*String search_query = "SELECT "+ColumnName.CustomerInfo.CUSTOMER_NAME+", "
+                +ColumnName.CustomerInfo.COUNTRY+" FROM "+ColumnName.CustomerInfo.TABLE_NAME+
+                " WHERE "+ColumnName.CustomerInfo.CUSTOMER_NAME+ " = "+search_name ;*/
+
+        String search_query = "SELECT CustomerName FROM Customers ;" ;
+        try {
+            cursor = db.rawQuery(search_query, null) ;
+        }
+        catch (SQLException e){
+            Log.d("++++SEARCH_QUERY++++", String.valueOf(e));
+            Toast.makeText(context, "Search Query Have Exception", Toast.LENGTH_SHORT).show();
+        }
+
+        return cursor ;
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

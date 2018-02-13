@@ -27,6 +27,14 @@
             android:text="Show All Customers"
             android:layout_marginTop="10dp"/>
 
+        <Button
+            android:id="@+id/search_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Search Data"
+            android:layout_marginTop="10dp"/>
+
 
     </LinearLayout>
 

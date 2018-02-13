@@ -19,7 +19,8 @@
         <activity
             android:name=".InsertData.InsertDataActivity"
             android:label="Insert Data" />
-        <activity android:name=".CustomerList.CustomerListActivity"></activity>
+        <activity android:name=".CustomerList.CustomerListActivity" />
+        <activity android:name=".SearchData.SearchDataActivity"></activity>
     </application>
 
 </manifest>
